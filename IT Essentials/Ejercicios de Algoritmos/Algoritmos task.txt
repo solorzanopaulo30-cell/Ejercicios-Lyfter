@@ -1,0 +1,67 @@
+Trabajo pendiente 
+Paulo Solorzano 
+
+
+
+1.Cree un algoritmo para ver un video en Youtube. Sea lo más especifico posible.
+
+
+1.Inicio 
+2. Abir el navegador web
+3.  Si tiene internet 
+    1.ir a YouTube.com 
+4.Sino revisar connection a internet 
+   1.Connectarse
+5. Buscar en el navegador el video deseado 
+6. Click en el video
+7. Si el video tiene imagen y sonido
+   1. Reproducir 
+8.Sino, recargar el video
+9. Reproducirlo
+10.Fin 
+
+
+
+
+
+2.Cree un algoritmo que describa su rutina diaria. Use condiciones, condiciones multiples y ciclos.
+
+1.Inicio 
+2.Despertar 8AM
+3.Revisar el celular
+4. Si tengo notificaciones laborales 
+   1.si tengo responderlas y revisar redes sociales hasta las 8:30AM
+   2.sino, revisar redes sociales hasta las 8:30AM
+5. Preparar cafe
+6. Log in en el trabajo y reportarme
+7.Revisar el calendario para reuniones pendientes durante el dia 
+8. Realizar tasks pendientes
+9. si tengo realizarlos
+  1.realizarlos y entregarlos
+10.Sino, Preguntar si hay updates de mi trabajo 
+  1.Si hay, realizarlos y entregarlos
+11. Sino, si no hay
+  1. Esperar hasta el final del shift 
+12.Log out 
+13. Salir a correr
+  1.si no hay llovia o tormenta 
+    1.ir a correr 
+  2. sino,
+    1.quedarse en casa
+14. terminar deporte 
+15. iniciar pelicula que quiero ver
+16. Mientras veo pelicula comer palomitas o dulces y tomar coca cola
+17 terminar pelicula
+18. iniciar a jugar play con mis amigos, 
+   1. si puedo hablar con ellos por voz 
+   2.sino, solo jugar 
+19. terminar partida
+20 comer 
+21.ver video de YouTube
+22. ir a la cama 
+
+
+
+
+
+

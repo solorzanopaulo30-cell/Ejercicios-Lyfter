@@ -1,0 +1,124 @@
+1.Cree un algoritmo como preparar una fiesta sorpresa para un amigo o familiar. Considere si la persona está en casa o no, si los invitados ya llegaron o no, qué hacer mientras esperan, y cómo finaliza la fiesta
+
+1.Inicio 
+2. Invitar a las personas sobre la fiesta sorpresa que haremos 
+  1. Si están interesado enviarles la invitación 
+3.Comprar las cosas para la fiesta 
+4. Preparar la casa para la fiesta
+  1.Si la persona no esta en la casa preparar las cosas
+  2.Sino
+     1. Llegar con todo preparado a la casa
+5. Si los invitados llegaron a la fiesta y a tiempo
+   1.entrar de sopresa
+6. Sino, si llegaron y no a tiempo hacerlos esperar para entrar hasta la sorpresa
+7. Sino, si no llegaron cancelar la fiesta
+8. Esperar a la cumpleañero para sorprenderlo con los invitados
+9. Realizar actividades para entretener a los invitados en lo que inicia la fiesta 
+  1.Si son varios jugar cartas
+     1.Repertir mientras esperan 
+  2.Sino, si son pocos
+     1.Jugar mímicas
+     2.Rpetir mientras esperan 
+10.Si la persona esta en la casa, llegar con todo listo para llegar de sorpresa 
+11. Realizar la fiesta
+12. Cantar cumpleaños 
+13. Comer queque 
+14.Pasarla bien 
+15. Finalizar la fiesta
+    1.si el cumpleañero esta cansado 
+    1.sino, seguir 
+16.Fin 
+
+
+
+
+--------------------------
+
+2.Cree un algoritmo que represente cómo prepararse para un examen importante. Debe incluir una lista de actividades (leer, repasar, practicar), condiciones como si ya entendió la materia, o si tiene dudas, y un ciclo que se repita hasta sentirse listo
+
+1.Inicio
+2.Realizar una guía de como prepararse 
+3.Leer materia general de todos los temas en el examen 
+4.practicar la materia en base a cuestionarios 
+   1. si entendí
+         1.Repasar 
+   2. Sino, Repetir la practica
+
+5.Repasar
+6.Si tengo dudas
+7 consultar con el profesor 
+   1.Si me aclara
+     1.repasarlo  
+   2. Sino
+     1.Preguntar
+8. Si no me siento listo
+    1.Repetir 
+      1.Inicio
+      2.Realizar una guía de como prepararse 
+      3.Leer materia general de todos los temas en el examen 
+      4.practicar la materia en base a cuestionarios 
+            1. si entendí
+                1.Repasar 
+            2. Sino, Repetir la practica
+
+      5.Repasar 
+      6.Si tengo dudas
+      7 consultar con el profesor 
+            1.Si me aclara
+               1.repasarlo  
+            2. Sino
+               1.Preguntar
+     2.Si me siento listo
+        1.Terminar estudio 
+9.Fin
+
+
+
+-------------------------
+
+3.Cree un algoritmo de como se prepara para ir a su viaje de diversión favorito
+
+
+1.Inicio 
+2.Elegir el destino del viaje
+3.Verificar el presupuesto 
+    1.Si alcanza 
+      1.Continuar con la planificación 
+    2.Sino 
+      1.Bucar otro destino mas económico 
+4.Reservar transporte y hospedaje 
+5.Hacer lista de cosas para empacar 
+6. Empacar la maleta
+   1.Si falta algo 
+     1.agregarlo
+   2. Sino
+    1.Cerrarla
+7.Revisar los documentos
+8.Si ya es el dia del viaje 
+   1.Salir hacia el transporte 
+9.Sino, esperar ek dia indicado 
+10.Si llega a tiempo al transporte 
+  1.Abordar
+11.Sino, buscar otra opción de transporte
+12.Disfrutar el viaje 
+13.Realizar las actividades planeadas 
+14.Si el viaje termino 
+   1.Regresar a casa
+15.Sino seguir disfrutando 
+16.Fin 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
