@@ -1,20 +1,37 @@
-
 import csv
 
-def category(file_path):
-    count = {}
+
+def read_games(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
-        kind_of_game = csv.reader(file)
-        header = next(kind_of_game)
-        for game in kind_of_game:
-            categories = game[1]
-            if categories in count:
-                count[categories] += 1
-            else:
-                count[categories] = 1
-    for categories, amount in sorted(count.items()):
-        print(f"{categories}: {amount}")
+        reader = csv.reader(file)
+        next(reader)
+        games = []
+        for game in reader:
+            games.append(game)
+    return games
+
+
+def count_by_genre(games):
+    count = {}
+    for game in games:
+        genre = game[1]
+        if genre in count:
+            count[genre] += 1
+        else:
+            count[genre] = 1
     return count
 
 
-category("ranking_video_games.csv")
+def print_count(count):
+    for genre, amount in sorted(count.items()):
+        print(f"{genre}: {amount}")
+
+
+def main():
+    games = read_games("ranking_video_games.csv")
+    count = count_by_genre(games)
+    print_count(count)
+
+
+if __name__ == '__main__':
+    main()

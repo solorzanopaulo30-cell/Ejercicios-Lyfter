@@ -15,7 +15,7 @@ def reader_json(path):
 def filter_type_pokemon(list1, type1):
     poke2 = []
     for pokemon in list1:
-        if pokemon['type'].lower() in type1.lower():
+        if pokemon['type'].lower() == type1.lower():
             poke2.append(pokemon)
     return poke2
 

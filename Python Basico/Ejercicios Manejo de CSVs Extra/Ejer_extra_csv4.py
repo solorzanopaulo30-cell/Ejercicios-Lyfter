@@ -1,19 +1,43 @@
-
 import csv
 
 
-def dev(file_path):
-    searching = input("Ingrese Desarrollador: ")
-    found = []
+def read_games(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
-        developers = csv.reader(file)
-        headers = next(developers)
-        for line in developers:
-            if searching.lower() in line[2].lower():
-                found.append(line)
-                print(f"Juego: {line[0]} | Genero: {line[1]} | Desarrollador: {line[2]} | Clasificacion: {line[3]}")
+        reader = csv.reader(file)
+        next(reader)
+        games = []
+        for line in reader:
+            games.append(line)
+    return games
+
+
+def ask_developer():
+    developer = input("Ingrese Desarrollador: ")
+    return developer
+
+
+def filter_by_developer(games, developer):
+    found = []
+    for game in games:
+        if developer.lower() in game[2].lower():
+            found.append(game)
+    return found
+
+
+def print_games(found, developer):
     if not found:
-        print(f"No se encontraron videojuegos desarrollados por '{searching}'.")
+        print(f"No se encontraron videojuegos desarrollados por '{developer}'.")
+    else:
+        for game in found:
+            print(f"Juego: {game[0]} | Genero: {game[1]} | Desarrollador: {game[2]} | Clasificacion: {game[3]}")
 
 
-dev("ranking_video_games.csv")
+def main():
+    games = read_games("ranking_video_games.csv")
+    developer = ask_developer()
+    found = filter_by_developer(games, developer)
+    print_games(found, developer)
+
+
+if __name__ == '__main__':
+    main()
