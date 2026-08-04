@@ -1,0 +1,14 @@
+Initial commit 
+    "this commit was just for practice during the first exercise"
+
+
+Uploading first exercises
+    "this commit updated the first three modules (IT Esssential, Logica de programacion, Python basico)"
+
+
+applied feedback on dicctionary exercise
+    "made some changes in python basico"
+
+Module Exercises 
+    "Adding python intermedio and a file with a basic code to test it"
+
