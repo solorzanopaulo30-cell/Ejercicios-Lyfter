@@ -3,12 +3,16 @@ import os
 
 
 #-----------Exportar CSV
-def export_csv(student_documentation, filename="Estudiantes.csv"):
+def export_csv(student_documentation, filename="estudiantes.csv"):
+    if not student_documentation:
+        print("No hay estudiantes para exportar.")
+        return
+
     fieldnames = student_documentation[0].keys()
     with open(filename, mode="w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerows(student_documentation)  
+        writer.writerows(student_documentation)
     print(f"Datos exportados a {filename}")
 
 
@@ -19,6 +23,7 @@ def import_from_csv(filename="estudiantes.csv"):
         print(f"No se encontró el archivo '{filename}'. Debe exportar los datos primero.")
         return None
     students_documentation = []
+
     with open(filename, mode="r", newline="", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         for row in reader:

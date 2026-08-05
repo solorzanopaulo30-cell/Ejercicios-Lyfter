@@ -3,10 +3,10 @@ import csv
 import os
 
 
-# --------Numerar los estudiantes a ingresar
-def amount_of_students():
-    amount = int(input("Ingrese la cantidad de estudiantes: "))
-    return amount
+# --------Numerar los estudiantes a ingresar - Not in use
+#def amount_of_students():
+#    amount = int(input("Ingrese la cantidad de estudiantes: "))
+#    return amount
 
 
 #---------Ingresar informacion de los estudiantes
