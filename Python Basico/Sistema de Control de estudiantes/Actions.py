@@ -3,10 +3,10 @@ import csv
 import os
 
 
-# --------Numerar los estudiantes a ingresar - Not in use
-#def amount_of_students():
-#    amount = int(input("Ingrese la cantidad de estudiantes: "))
-#    return amount
+#--------Numerar los estudiantes a ingresar - Not in use
+def amount_of_students():
+    amount = int(input("Ingrese la cantidad de estudiantes: "))
+    return amount
 
 
 #---------Ingresar informacion de los estudiantes
@@ -134,22 +134,3 @@ def export_csv(student_documentation, filename="Estudiantes.csv"):
         writer.writeheader()
         writer.writerows(student_documentation)  
     print(f"Datos exportados a {filename}")
-
-
-#----------Importar datos
-
-def import_from_csv(filename="estudiantes.csv"):
-    if not os.path.exists(filename):
-        print(f"No se encontró el archivo '{filename}'. Debe exportar los datos primero.")
-        return None
-    students_documentation = []
-    with open(filename, mode="r", newline="", encoding="utf-8") as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            row['nota espanol'] = int(row['nota espanol'])
-            row['nota ingles'] = int(row['nota ingles'])
-            row['nota sociales'] = int(row['nota sociales'])
-            row['nota ciencias'] = int(row['nota ciencias'])
-            students_documentation.append(row)
-    print(f"Datos importados correctamente desde '{filename}'.")
-    return students_documentation

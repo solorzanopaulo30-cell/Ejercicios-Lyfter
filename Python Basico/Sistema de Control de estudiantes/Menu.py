@@ -62,7 +62,8 @@ def menu_selection(students_documentation):
                 Actions.student_failed(average)
 
             elif picked == add_student:
-                new = Actions.students_information(1)
+                amount = Actions.amount_of_students()
+                new = Actions.students_information(amount)
                 students_documentation.extend(new)
 
             elif picked == delete_student:
@@ -74,7 +75,8 @@ def menu_selection(students_documentation):
             elif picked == import_info:
                 result = Data.import_from_csv()
                 if result is not None:
-                    students_documentation = result
+                    students_documentation.clear()
+                    students_documentation.extend(result)
 
             else:
                 print("Numero invalido")
