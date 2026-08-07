@@ -1,23 +1,42 @@
-
 import csv
 
 
-def ask_clasification(path):
-    clas1 = input("Ingrese Clasificacion: ")
-    filter1 = []
+def read_games(path):
     with open(path, 'r', encoding='utf-8') as file:
-            reader = csv.reader(file)
-            header =next(reader)
-            for line in reader:
-                if line[3] == clas1:
-                    filter1.append(line)
-                    print(f"el juego con esa clasificacion es: {line[0]}")
-    if not filter1:
-        print("No se se encontraron archivos con esa clasificacion")
+        reader = csv.reader(file)
+        next(reader)
+        games = []
+        for line in reader:
+            games.append(line)
+    return games
+
+
+def ask_classification():
+    classification = input("Ingrese Clasificacion: ")
+    return classification
+
+
+def filter_by_classification(games, classification):
+    filtered_games = []
+    for game in games:
+        if game[3] == classification:
+            filtered_games.append(game)
+    return filtered_games
+
+
+def print_filtered_games(filtered_games):
+    if not filtered_games:
+        print("No se encontraron juegos con esa clasificacion")
+    else:
+        for game in filtered_games:
+            print(f"El juego con esa clasificacion es: {game[0]}")
 
 
 def main():
-    ask_clasification("ranking_video_games.csv")
+    games = read_games("ranking_video_games.csv")
+    classification = ask_classification()
+    filtered_games = filter_by_classification(games, classification)
+    print_filtered_games(filtered_games)
 
 
 if __name__ == '__main__':

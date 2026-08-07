@@ -13,7 +13,7 @@ def selected_group(path):
         level = pokemon['level']
         if type1 not in groups:
             groups[type1] = []
-            groups[type1].append(level)
+        groups[type1].append(level)
     return groups
 
 
