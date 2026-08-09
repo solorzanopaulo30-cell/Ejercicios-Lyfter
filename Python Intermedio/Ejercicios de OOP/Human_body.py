@@ -52,7 +52,7 @@ right_leg = Leg(right_feet)
 left_leg = Leg(left_feet)
 
 
-head = Head
+head = Head()
 
 torso = Torso(head,right_arm,left_arm,right_leg,left_leg)
 
