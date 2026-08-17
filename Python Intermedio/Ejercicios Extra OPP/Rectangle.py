@@ -4,7 +4,7 @@
 class Rectangle():
     def __init__(self, width,height):
         if width < 0 or height < 0:
-            raise ValueError
+            raise ValueError ("Existe un valor negativo, los valores deben ser positivos")
         self.width = width
         self.height = height
 
@@ -15,7 +15,7 @@ class Rectangle():
 
 #----perimeter
     def get_perimeter(self):
-        perimeter = self.height + self.width
+        perimeter = (self.height + self.width) * 2
         return perimeter
 
 width = int(input("Ingrese el ancho del rectangulo: "))
