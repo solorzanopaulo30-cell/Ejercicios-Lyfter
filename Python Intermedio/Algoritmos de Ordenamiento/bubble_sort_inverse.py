@@ -6,7 +6,7 @@ def bubble_sort(list_of_ages):
             current_num = list_of_ages[i]
             next_num = list_of_ages[i + 1]
             print(f"interacion {i}. Elemento actual {current_num}. Siguente elemento {next_num}.")
-            if current_num > next_num:
+            if current_num < next_num:
                 print("Numero esta siendo cambiado")
                 list_of_ages[i] = next_num
                 list_of_ages[i + 1] = current_num
