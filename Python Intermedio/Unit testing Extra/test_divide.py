@@ -1,0 +1,34 @@
+from divide import divide
+import pytest
+
+#----------------------------------------------------------
+
+def test_divide():
+    #AAA
+    #Arrange
+    number1 = 10
+    number2 = 5
+    #Act
+    result = divide(number1,number2)
+    #Assert
+    assert result == 2
+
+
+#-----------------------------------------------------------
+def test_divide_by_zero_raises_value_error():
+    # Arrange
+    number1 = 10
+    number2 = 0
+    # Act & Assert
+    with pytest.raises(ValueError):
+        divide(number1, number2)
+
+
+#------------------------------------------------------------
+def test_divide_with_string_raises_type_error():
+    # Arrange
+    number1 = 10
+    number2 = "hola"
+    # Act & Assert
+    with pytest.raises(TypeError):
+        divide(number1, number2)
