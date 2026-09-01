@@ -4,14 +4,13 @@ import pytest
 #----------------------------------------------------------
 
 def test_divide():
-    #AAA
-    #Arrange
+    # Arrange
     number1 = 10
-    number2 = 5
-    #Act
-    result = divide(number1,number2)
-    #Assert
-    assert result == 2
+    number2 = 2
+    # Act
+    result = divide(number1, number2)
+    # Assert
+    assert result == 5.0
 
 
 #-----------------------------------------------------------
