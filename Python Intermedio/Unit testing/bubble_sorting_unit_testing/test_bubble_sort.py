@@ -24,10 +24,12 @@ def test_large_bubble_sort():
     #AA
     #Arrange
     previous_list = [random.randint(1, 1000) for _ in range(200)]
+    expected = sorted(previous_list)
     #Act
     my_list = bubble_sort(previous_list)
     #Assert
     assert my_list
+    assert len(my_list) == len(expected)
 
 
 #---------------------------------------------------------------------------------------------------------------------------------
