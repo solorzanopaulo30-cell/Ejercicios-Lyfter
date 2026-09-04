@@ -44,7 +44,7 @@ class FinancialMgmt():
 
     def add_categories(self, category):
         if category == "":
-            print("La categoria no puede estar vacia")
+            print("Category cannot be empthy")
             return
         if category in self.categories:
             print("This category already exists")
