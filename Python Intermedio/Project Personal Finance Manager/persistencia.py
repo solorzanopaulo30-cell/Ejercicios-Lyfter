@@ -1,29 +1,26 @@
 import json
-from datetime import date
-from logica import FinancialMgmt, Movement,Entry,Spend 
 import os
+from logica import FinancialMgmt, Movement, Category
 
 
 def save(manager, filename="finance.json"):
-    movimientos_dict = [movement.to_dict() for movement in manager.movements]
-    datos = {
-        "categories": manager.categories,
-        "movements": movimientos_dict
+    data = {
+        "categories": [c.to_dict() for c in manager.categories],
+        "movements": [m.to_dict() for m in manager.movements]
     }
     with open(filename, "w") as file:
-        json.dump(datos, file, indent=4)
+        json.dump(data, file, indent=4)
 
 
-def load(filename="test_finance.json"):
+def load(filename="finance.json"):
     if not os.path.exists(filename):
         return None
     with open(filename, "r") as file:
         data = json.load(file)
     manager = FinancialMgmt()
-    manager.categories = data["categories"]
-    for movimiento_dict in data["movements"]:
-        movimiento_objeto = Movement.from_dict(movimiento_dict)
-        manager.movements.append(movimiento_objeto)
-        manager.balance += movimiento_objeto.apply()
-
+    manager.categories = [Category.from_dict(c) for c in data["categories"]]
+    for movement_dict in data["movements"]:
+        movement_object = Movement.from_dict(movement_dict, manager.categories)
+        manager.movements.append(movement_object)
+        manager.balance += movement_object.apply()
     return manager
