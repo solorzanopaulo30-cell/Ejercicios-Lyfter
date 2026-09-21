@@ -4,7 +4,7 @@
 
 import csv
 
-def leer_csv_con_punto_y_coma(filename):
+def read_by_dot_and_coma(filename):
     with open(filename, "r") as file:
         reader = csv.DictReader(file, delimiter=";")
         for row in reader:
