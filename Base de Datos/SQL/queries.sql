@@ -1,7 +1,7 @@
 -- SQLite
 
 
--- 3. Alter agregar telefono 
+-- 3. Alter agregar telefono y codigo de empleado (Tiene que ser una sola vez)
 ALTER TABLE Invoices ADD COLUMN Buyer_Phone TEXT;
 ALTER TABLE Invoices ADD COLUMN Employee_Code INT;
 
@@ -16,7 +16,7 @@ SELECT * FROM Products WHERE Price_Cents > 5000000;
 -- 4.3 Obtenga todas las compras de un mismo producto por id.
 SELECT * FROM Products_Per_Invoice WHERE Product_Code = 1;
 
---4.4 Obtenga todas las compras agrupadas por producto, donde se muestre el total comprado entre todas las compras.
+-- 4.4 Obtenga todas las compras agrupadas por producto, donde se muestre el total comprado entre todas las compras.
 SELECT Product_Code, SUM(Quantity) FROM Products_Per_Invoice GROUP BY Product_Code;
 
 -- 4.5 Obtenga todas las facturas realizadas por el mismo comprador
