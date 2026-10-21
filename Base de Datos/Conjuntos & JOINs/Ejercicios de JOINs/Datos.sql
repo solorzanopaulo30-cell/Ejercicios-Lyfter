@@ -2,10 +2,10 @@
 PRAGMA foreign_keys = ON;
 
 
-DELETE FROM Books;
-DELETE FROM Authors;
-DELETE FROM Customers;
 DELETE FROM Rents;
+DELETE FROM Books;
+DELETE FROM Customers;
+DELETE FROM Authors;
 
 ----------------------------------------------------------------------------
 INSERT INTO Authors (ID, Name) VALUES
@@ -35,4 +35,4 @@ INSERT INTO Rents (ID,BookID, CustomerID,State) VALUES
 (2,2,2,'Returned'),
 (3,1,1,'On Time'),
 (4,3,1,'On Time'),
-(5,2,2,'Overdue'),
+(5,2,2,'Overdue');
