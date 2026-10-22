@@ -3,7 +3,12 @@
 -- 2. Agrupamiento y conteo cruzado
 -- Obtenga el número total de veces que cada cliente ha rentado un libro
 -- Ordene de mayor a menor y limite el resultado a los 3 clientes más activos
-SELECT CustomerID, COUNT(*) AS Total FROM Rents GROUP BY CustomerID ORDER BY Total DESC LIMIT 3;
+SELECT Customers.Name AS Cliente, COUNT(*) AS Total
+FROM Rents
+JOIN Customers ON Rents.CustomerID = Customers.ID
+GROUP BY Customers.ID
+ORDER BY Total DESC
+LIMIT 3;
 
 -- 3. Consulta con múltiples JOINS anidados
 -- Nombre del cliente, nombre del libro, nombre del autor y estado del alquiler
